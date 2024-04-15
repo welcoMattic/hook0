@@ -5,7 +5,7 @@ import './tailwind.css';
 import { createApp } from 'vue';
 import router from './router';
 import { Promised } from 'vue-promised';
-import { KeycloakPlugin } from './iam';
+import { AuthPlugin } from './iam';
 
 import Root from './Root.vue';
 
@@ -54,8 +54,8 @@ const app = createApp(Root);
 // Vue - UIRouter
 app.use(router);
 
-// Expose Keycloak JS
-app.use(KeycloakPlugin);
+// Authentication & authorization
+app.use(AuthPlugin);
 
 // font-awesome
 // Add here
